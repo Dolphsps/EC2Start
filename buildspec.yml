@@ -4,10 +4,7 @@ phases:
     commands:
       - aws cloudformation package --template-file LambdaEC2Start.yaml --s3-bucket lonbergit-lambda
                                    --output-template-file NewLambdaEC2Start.yaml
-      - aws cloudformation package --template-file LambdaEC2Stop.yaml --s3-bucket lonbergit-lambda
-                                   --output-template-file NewLambdaEC2Stop.yaml                                   
 artifacts:
   type: zip
   files:
     - NewLambdaEC2Start.yaml
-    - NewLambdaEC2Stop.yaml
